@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<!-- 设置模块的名称以及控制器的名称 -->
+<html lang="en" ng-app="app" ng-controller="TranslateController">
+<head>
+    <meta charset="UTF-8">
+    <title>DaoDeJing</title>
+    <!-- 图标 -->
+    <link rel="shortcut icon" href="img/daodejing_icon.png">
+    <!-- 通用CSS -->
+    <link rel="stylesheet" href="css/daodejing.css">
+    <!-- 滑动条CSS -->
+    <link rel="stylesheet" href="css/daodejing_scrollbar.css">
+    <link rel="stylesheet" href="css/daodejing_main.css">
+    <!-- AngularJs库 -->
+    <script src="angular/angular.min.js"></script>
+    <!-- angular翻译 -->
+    <script src="angular/angular-translate.js"></script>
+    <!-- angular翻译文件加载 -->
+    <script src="angular/angular-translate-loader-static-files.js"></script>
+    <!-- 通用angular -->
+    <script src="angular/daodejing_angular.js"></script>
+</head>
+<body>
+<!-- 头部 -->
+<header class="header-bar">
+    <div id="icon"><img src='{{"main_img"|translate}}' alt=""></div>
+    <ul class="header-list">
+        <li class="header-list-item select" data="main">{{"homepage"|translate}}</li>
+        <li class="header-list-item" data="introduction">{{"introduction"|translate}}</li>
+        <li class="header-list-item" data="author">{{"author"|translate}}</li>
+        <li class="header-list-item" data="download">{{"download"|translate}}</li>
+    </ul>
+</header>
+<!-- 主体 -->
+<section>
+    <!-- 主体左侧导航 -->
+    <nav class="scrollbar-list" id="nav">
+        <div class="scrollbar" id="nav-da">
+        </div>
+    </nav>
+    <!-- 主体右侧内容 -->
+    <content class="content-list" id="content-da">
+    </content>
+    <div id="back_to_top" class="list-item">
+        <img src="img/daodejing_back_to_top.png">
+    </div>
+</section>
+<!-- 脚部 -->
+<footer> {{"footer"|translate}} </footer>
+<!-- jquery库 -->
+<script src="js/jquery-1.12.4.js"></script>
+<!-- jquerymin库 -->
+<script src="js/jquery-1.8.3.min.js"></script>
+<script src="js/daodejing.js"></script>
+<script src="js/daodejing_main.js"></script>
+</body>
+</html>
